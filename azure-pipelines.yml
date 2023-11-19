@@ -1,0 +1,26 @@
+trigger:
+- main  # Or the branch you want to trigger the pipeline
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+jobs:
+- job: Build
+  displayName: 'Build and Push to GitHub'
+  steps:
+  - script: |
+      # Your build commands here
+      echo "Building the code"
+    displayName: 'Build'
+
+  - task: PublishBuildArtifacts@1
+    inputs:
+      pathtoPublish: '$(Build.ArtifactStagingDirectory)'
+      artifactName: 'drop'
+      publishLocation: 'Container'
+  - task: GitHubPush@2
+    inputs:
+      repository: 'DotNet_Core_MVC'
+      branch: 'main'  # Or the branch you want to push to
+      githubConnection: 'https://github.com/ChaitanyaPanchavarti/DotNet_Core_MVC.git'
+
