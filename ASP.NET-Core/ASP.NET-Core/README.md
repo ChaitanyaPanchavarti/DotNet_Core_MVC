@@ -1,11 +1,8 @@
-# ASP.NET-Core-kudvencat
+# ASP.NET-Core-MVC
 
-This course is based on a video series of more than 20 hours about .NET Core MVC, that has probably taken me around 100h to complete and fully understand.
-
-It is really intersting how the author goes into so much detail about the framework. I was already familiar with .NET and I had worked with it during more than 1 year in a project with USDA. This tutorial helped me understand much better the underlying details of the framework, learn what it is doing for us, and learn how to take the best out of it.
-
+This is an employee portal application where user Register and login into the application. I have implemented email confimation logic for authentication purpose and once the user enter into the application based on their privileges/authorization they get access to specific details in the application
 The main topics I have learnt from this tutorial are
-* Basics in a .NET Core project
+*In this.NET Core project contains
   * Middleware components
   * HTTP pipeline
   * Add and configure services
@@ -19,6 +16,6 @@ The main topics I have learnt from this tutorial are
   * User Manager
   * Sign in Manager
   * Role Manager
-* Good programming practices
+* Programming practices
   * Program to an interfaces
   * Dependency injection
